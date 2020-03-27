@@ -1,0 +1,431 @@
+local JailbreakHaxx2 = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Noclip = Instance.new("TextButton")
+local Speed = Instance.new("TextButton")
+local InfJump = Instance.new("TextButton")
+local AltDelete = Instance.new("TextButton")
+local Btools = Instance.new("TextButton")
+local JailedCat = Instance.new("TextButton")
+local AutoRob = Instance.new("TextButton")
+local AntiKick = Instance.new("TextButton")
+local ChatSpy = Instance.new("TextButton")
+local Jailbreak = Instance.new("TextLabel")
+local Haxx = Instance.new("TextLabel")
+local Status1 = Instance.new("TextLabel")
+local Status2 = Instance.new("TextLabel")
+local LabelH = Instance.new("TextLabel")
+local LabelJ = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local UpdatedLast = Instance.new("TextLabel")
+local OpenFrame = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+
+--Properties:
+game.StarterGui:SetCore("SendNotification", {
+    Title = "JailbreakHaxx2!";
+    Text = "Injected :D";
+    Icon = "";
+    Duration = 5;
+    Callback = bindableFunction;
+    Button1 = "";  
+    Button2 = "";
+})
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "JailbreakHaxx2!";
+    Text = "Reccommended to use level 7 exploit for best performance";
+    Icon = "";
+    Duration = 5;
+    Callback = bindableFunction;
+    Button1 = "";  
+    Button2 = "";
+})
+
+JailbreakHaxx2.Name = "JailbreakHaxx2"
+JailbreakHaxx2.Parent = game.CoreGui
+JailbreakHaxx2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = JailbreakHaxx2
+Main.Active = true
+Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Main.Position = UDim2.new(0.294879675, 0, 0.0528255515, 0)
+Main.Size = UDim2.new(0, 524, 0, 220)
+Main.Draggable = true
+
+Noclip.Name = "Noclip"
+Noclip.Parent = Main
+Noclip.BackgroundColor3 = Color3.fromRGB(185, 6, 255)
+Noclip.Position = UDim2.new(0.0226438008, 0, 0.15875499, 0)
+Noclip.Size = UDim2.new(0, 157, 0, 35)
+Noclip.Font = Enum.Font.Arial
+Noclip.Text = "Noclip"
+Noclip.TextColor3 = Color3.fromRGB(0, 0, 0)
+Noclip.TextSize = 18.000
+Noclip.MouseButton1Down:connect(function()
+game.StarterGui:SetCore("SendNotification", {
+    Title = "JailbreakHaxx2!";
+    Text = "Noclip Enabled";
+    Icon = "";
+    Duration = 5;
+    Callback = bindableFunction;
+    Button1 = "";  
+    Button2 = "";
+})
+loadstring(game:HttpGet("https://pastebin.com/raw/cZedvY8Q"))();
+end)
+
+Speed.Name = "Speed"
+Speed.Parent = Main
+Speed.BackgroundColor3 = Color3.fromRGB(185, 6, 255)
+Speed.Position = UDim2.new(0.0226438008, 0, 0.422391325, 0)
+Speed.Size = UDim2.new(0, 157, 0, 35)
+Speed.Font = Enum.Font.Arial
+Speed.Text = "Speed(X)"
+Speed.TextColor3 = Color3.fromRGB(0, 0, 0)
+Speed.TextSize = 18.000
+Speed.MouseButton1Down:connect(function()
+game.StarterGui:SetCore("SendNotification", {
+    Title = "JailbreakHaxx2!";
+    Text = "Speed Enabled use X to toggle";
+    Icon = "";
+    Duration = 5;
+    Callback = bindableFunction;
+    Button1 = "";  
+    Button2 = "";
+})
+
+local walkspeedplayer = game:GetService("Players").LocalPlayer
+    local walkspeedmouse = walkspeedplayer:GetMouse()
+   
+    local walkspeedenabled = false
+   
+    function x_walkspeed(key)
+        if (key == "x") then
+            if walkspeedenabled == false then
+                _G.WS = 110;
+                local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+                Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+                Humanoid.WalkSpeed = _G.WS;
+                end)
+                Humanoid.WalkSpeed = _G.WS;
+               
+                walkspeedenabled = true
+            elseif walkspeedenabled == true then
+                _G.WS = 20;
+                local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+                Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+                Humanoid.WalkSpeed = _G.WS;
+                end)
+                Humanoid.WalkSpeed = _G.WS;
+               
+                walkspeedenabled = false
+            end
+        end
+    end
+   
+    walkspeedmouse.KeyDown:connect(x_walkspeed)
+   
+end)
+
+InfJump.Name = "InfJump"
+InfJump.Parent = Main
+InfJump.BackgroundColor3 = Color3.fromRGB(185, 6, 255)
+InfJump.Position = UDim2.new(0.0226438008, 0, 0.681482196, 0)
+InfJump.Size = UDim2.new(0, 157, 0, 35)
+InfJump.Font = Enum.Font.Arial
+InfJump.Text = "InfJump"
+InfJump.TextColor3 = Color3.fromRGB(0, 0, 0)
+InfJump.TextSize = 18.000
+InfJump.MouseButton1Down:connect(function()
+InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
+
+AltDelete.Name = "AltDelete"
+AltDelete.Parent = Main
+AltDelete.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AltDelete.BorderColor3 = Color3.fromRGB(255, 255, 255)
+AltDelete.Position = UDim2.new(0.348979682, 0, 0.422391325, 0)
+AltDelete.Size = UDim2.new(0, 157, 0, 35)
+AltDelete.Font = Enum.Font.Arial
+AltDelete.Text = "AltDelete"
+AltDelete.TextColor3 = Color3.fromRGB(255, 255, 255)
+AltDelete.TextSize = 18.000
+AltDelete.MouseButton1Down:connect(function()
+local Plr = game:GetService("Players").LocalPlayer
+local Mouse = Plr:GetMouse()
+Mouse.Button1Down:connect(function()
+if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftAlt) then return end
+if not Mouse.Target then return end
+Mouse.Target:Destroy()
+end)
+end)
+
+Btools.Name = "Btools"
+Btools.Parent = Main
+Btools.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Btools.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Btools.Position = UDim2.new(0.348979682, 0, 0.681482196, 0)
+Btools.Size = UDim2.new(0, 157, 0, 35)
+Btools.Font = Enum.Font.Arial
+Btools.Text = "Btools"
+Btools.TextColor3 = Color3.fromRGB(255, 255, 255)
+Btools.TextSize = 18.000
+Btools.MouseButton1Down:connect(function()
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+for index, child in pairs(game:GetService("Workspace"):GetChildren()) do
+   if child.ClassName == "Part" then
+       child.Locked = false
+   end
+   if child.ClassName == "MeshPart" then
+       child.Locked = false
+   end
+   if child.ClassName == "UnionOperation" then
+       child.Locked = false
+   end
+   if child.ClassName == "Model" then
+       for index, chil in pairs(child:GetChildren()) do
+           if chil.ClassName == "Part" then
+               chil.Locked = false
+           end
+           if chil.ClassName == "MeshPart" then
+               chil.Locked = false
+           end
+           if chil.ClassName == "UnionOperation" then
+               chil.Locked = false
+           end
+           if chil.ClassName == "Model" then
+               for index, childe in pairs(chil:GetChildren()) do
+                   if childe.ClassName == "Part" then
+                       childe.Locked = false
+                   end
+                   if childe.ClassName == "MeshPart" then
+                       childe.Locked = false
+                   end
+                   if childe.ClassName == "UnionOperation" then
+                       childe.Locked = false
+                   end
+                   if childe.ClassName == "Model" then
+                       for index, childeo in pairs(childe:GetChildren()) do
+                           if childeo.ClassName == "Part" then
+                               childeo.Locked = false
+                           end
+                           if childeo.ClassName == "MeshPart" then
+                               childeo.Locked = false
+                           end
+                           if childeo.ClassName == "UnionOperation" then
+                               childeo.Locked = false
+                           end
+                           if childeo.ClassName == "Model" then
+                           end
+                       end
+                   end
+               end
+           end
+       end
+   end
+end
+c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
+c.BinType = Enum.BinType.Hammer
+c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
+c.BinType = Enum.BinType.Clone
+c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
+c.BinType = Enum.BinType.Grab
+end)
+
+JailedCat.Name = "JailedCat"
+JailedCat.Parent = Main
+JailedCat.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+JailedCat.Position = UDim2.new(0.686765909, 0, 0.422391325, 0)
+JailedCat.Size = UDim2.new(0, 157, 0, 35)
+JailedCat.Font = Enum.Font.Arial
+JailedCat.Text = "JailedCat"
+JailedCat.TextColor3 = Color3.fromRGB(0, 0, 0)
+JailedCat.TextSize = 18.000
+JailedCat.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://pastebin.com/raw/yvmWLNP0", true))()
+end)
+
+AutoRob.Name = "AutoRob"
+AutoRob.Parent = Main
+AutoRob.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+AutoRob.Position = UDim2.new(0.686765909, 0, 0.681482255, 0)
+AutoRob.Size = UDim2.new(0, 157, 0, 35)
+AutoRob.Font = Enum.Font.Arial
+AutoRob.Text = "AutoRob"
+AutoRob.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoRob.TextSize = 18.000
+AutoRob.MouseButton1Down:connect(function()
+loadstring(game:GetObjects("rbxassetid://1461971147")[1].Source)()
+end)
+
+AntiKick.Name = "AntiKick"
+AntiKick.Parent = Main
+AntiKick.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+AntiKick.Position = UDim2.new(0.686765909, 0, 0.158755004, 0)
+AntiKick.Size = UDim2.new(0, 157, 0, 35)
+AntiKick.Font = Enum.Font.Arial
+AntiKick.Text = "AntiKick(beta)"
+AntiKick.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntiKick.TextSize = 18.000
+AntiKick.MouseButton1Down:connect(function()
+game.StarterGui:SetCore("SendNotification", {
+    Title = "AntiKick";
+    Text = "Bypassed";
+    Icon = "";
+    Duration = 5;
+    Callback = bindableFunction;
+    Button1 = "";  
+    Button2 = "";
+})
+local mt = getrawmetatable(game)
+	local oldNamecall = mt.__namecall
+	if setreadonly then setreadonly(mt, false) else make_writeable(mt, true) end
+	local namecallMethod = getnamecallmethod or get_namecall_method
+	local newClose = newcclosure or function(f) return f end
+
+	mt.__namecall = newClose(function(self, ...)
+		local method = namecallMethod()
+		local args = {...}
+
+		if method == "Kick" then
+		warn('Kick Attempt')
+		wait(math.huge)
+		end
+		return oldNamecall(self, unpack(args))
+	end)
+if setreadonly then setreadonly(mt, true) else make_writeable(mt, false) end
+end)
+
+ChatSpy.Name = "ChatSpy"
+ChatSpy.Parent = Main
+ChatSpy.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ChatSpy.BorderColor3 = Color3.fromRGB(255, 255, 255)
+ChatSpy.Position = UDim2.new(0.348979682, 0, 0.15875499, 0)
+ChatSpy.Size = UDim2.new(0, 157, 0, 35)
+ChatSpy.Font = Enum.Font.Arial
+ChatSpy.Text = "Chat Spy"
+ChatSpy.TextColor3 = Color3.fromRGB(255, 255, 255)
+ChatSpy.TextSize = 18.000
+ChatSpy.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://pastebin.com/raw/Ux4W3V5K"))();
+end)
+
+Jailbreak.Name = "Jailbreak"
+Jailbreak.Parent = Main
+Jailbreak.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Jailbreak.BackgroundTransparency = 1.000
+Jailbreak.Position = UDim2.new(0.347328216, 0, 0.0318181813, 0)
+Jailbreak.Size = UDim2.new(0, 74, 0, 27)
+Jailbreak.Font = Enum.Font.Arial
+Jailbreak.Text = "Jailbreak"
+Jailbreak.TextColor3 = Color3.fromRGB(255, 0, 251)
+Jailbreak.TextSize = 28.000
+
+Haxx.Name = "Haxx"
+Haxx.Parent = Main
+Haxx.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Haxx.BackgroundTransparency = 1.000
+Haxx.Position = UDim2.new(0.520992279, 0, 0.0318181813, 0)
+Haxx.Size = UDim2.new(0, 74, 0, 27)
+Haxx.Font = Enum.Font.Arial
+Haxx.Text = "Haxx2"
+Haxx.TextColor3 = Color3.fromRGB(234, 255, 0)
+Haxx.TextSize = 28.000
+
+Status1.Name = "Status1"
+Status1.Parent = Main
+Status1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Status1.BackgroundTransparency = 1.000
+Status1.Position = UDim2.new(0.347328216, 0, 0.877272725, 0)
+Status1.Size = UDim2.new(0, 74, 0, 27)
+Status1.Font = Enum.Font.Arial
+Status1.Text = "Statu"
+Status1.TextColor3 = Color3.fromRGB(255, 0, 251)
+Status1.TextSize = 28.000
+
+Status2.Name = "Status2"
+Status2.Parent = Main
+Status2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Status2.BackgroundTransparency = 1.000
+Status2.Position = UDim2.new(0.561068654, 0, 0.877272725, 0)
+Status2.Size = UDim2.new(0, 74, 0, 27)
+Status2.Font = Enum.Font.Arial
+Status2.Text = "s : Undetected"
+Status2.TextColor3 = Color3.fromRGB(234, 255, 0)
+Status2.TextSize = 28.000
+
+LabelH.Name = "LabelH"
+LabelH.Parent = Main
+LabelH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LabelH.BackgroundTransparency = 1.000
+LabelH.Position = UDim2.new(0.900763333, 0, 0.0318181515, 0)
+LabelH.Size = UDim2.new(0, 74, 0, 27)
+LabelH.Font = Enum.Font.Arial
+LabelH.Text = "H"
+LabelH.TextColor3 = Color3.fromRGB(234, 255, 0)
+LabelH.TextSize = 35.000
+
+LabelJ.Name = "LabelJ"
+LabelJ.Parent = Main
+LabelJ.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LabelJ.BackgroundTransparency = 1.000
+LabelJ.Position = UDim2.new(-2.98023224e-08, 0, 0.0272727273, 0)
+LabelJ.Size = UDim2.new(0, 33, 0, 27)
+LabelJ.Font = Enum.Font.Arial
+LabelJ.Text = "J"
+LabelJ.TextColor3 = Color3.fromRGB(255, 0, 251)
+LabelJ.TextSize = 35.000
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0.874045968, 0, 0.0272727273, 0)
+Close.Size = UDim2.new(0, 38, 0, 26)
+Close.Font = Enum.Font.Arial
+Close.Text = "-"
+Close.TextColor3 = Color3.fromRGB(225, 218, 0)
+Close.TextSize = 35.000
+Close.MouseButton1Down:connect(function()
+OpenFrame.Visible = true
+Main.Visible = false
+end)
+
+UpdatedLast.Name = "UpdatedLast"
+UpdatedLast.Parent = Main
+UpdatedLast.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UpdatedLast.BackgroundTransparency = 1.000
+UpdatedLast.Position = UDim2.new(0.0209923666, 0, 0.863636374, 0)
+UpdatedLast.Size = UDim2.new(0, 119, 0, 30)
+UpdatedLast.Font = Enum.Font.Arial
+UpdatedLast.Text = "Updated 2/30/20"
+UpdatedLast.TextColor3 = Color3.fromRGB(217, 1, 255)
+UpdatedLast.TextSize = 18.000
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = JailbreakHaxx2
+OpenFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+OpenFrame.Position = UDim2.new(0, 0, 0.280007482, 0)
+OpenFrame.Size = UDim2.new(0, 100, 0, 23)
+OpenFrame.Visible = false
+
+Open.Name = "Open"
+Open.Parent = OpenFrame
+Open.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Open.BorderSizePixel = 0
+Open.Position = UDim2.new(0, 0, 6.63425624e-07, 0)
+Open.Size = UDim2.new(0, 100, 0, 22)
+Open.Font = Enum.Font.Arial
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open.TextSize = 20.000
+Open.MouseButton1Down:connect(function()
+Main.Visible = true
+OpenFrame.Visible = false
+end)
